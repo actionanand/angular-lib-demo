@@ -18,7 +18,7 @@ $ ng generate library my-lib --prefix=demo
 ```
 
 ```bash
-ng generate lib my-lib --prefix=demo
+ng g lib my-lib --prefix=demo
 ```
 
 > This adds a `projects` directory containing a `my-lib` directory for our newly generated `my-workspace` Angular workspace.
