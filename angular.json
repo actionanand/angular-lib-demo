@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ngx-ar-test-lib": {
+      "projectType": "library",
+      "root": "projects/ngx-ar-test-lib",
+      "sourceRoot": "projects/ngx-ar-test-lib/src",
+      "prefix": "ngx-ar",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-ar-test-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-ar-test-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-ar-test-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-ar-test-lib/src/test.ts",
+            "tsConfig": "projects/ngx-ar-test-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-ar-test-lib/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ngx-ar-test-lib"
 }
