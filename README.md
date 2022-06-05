@@ -79,6 +79,45 @@ When including additional assets like Sass mixins or pre-compiled CSS. You need 
 ng build my-lib --watch
 ```
 
+### Linking already built with watch mode to Angular app
+
+```bash
+$ cd dist/my-lib
+$ npm link
+```
+
+Now open the seperate angular app where you want to test it
+
+```bash
+npm link my-lib
+```
+
+If you already have `my-lib` it installed through npm
+
+```bash
+npm uninstall my-lib
+```
+
+add the following to the root `package.json` file
+
+```json
+"scripts": {
+  ...
+  "build_lib": "ng build my-lib",
+  "npm_pack": "cd dist/my-lib && npm pack",
+  "package": "npm run build_lib && npm run npm_pack"
+},
+```
+
+```
+npm install ../angular-lib-demo/dist/my-lib/my-lib-0.0.1.tgz
+```
+
+```typescript
+import { AngularLibDemoModule } from 'my-lib';
+```
+
 ### Support Docs
 
 - [Creating libraries - Official](https://angular.io/guide/creating-libraries)
+- [The Angular Library Series - Creating a Library with Angular CLI](https://medium.com/angular-in-depth/creating-a-library-in-angular-6-87799552e7e5)
