@@ -2,26 +2,122 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.0.
 
-## Development server
+## Creating angular workspace without angular app
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```bash
+$ ng new my-workspace --no-create-application
+$ cd my-workspace
+$ ng generate library my-lib
+```
 
-## Code scaffolding
+> we can create libraries with angular app also
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+$ cd my-workspace
+$ ng generate library my-lib --prefix=demo
+```
 
-## Build
+> This adds a `projects` directory containing a `my-lib` directory for our newly generated `my-workspace` Angular workspace.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+ng generate application my-app
+```
 
-## Running unit tests
+> This adds a `my-app` directory in the `projects` directory
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### testing library in dev
 
-## Running end-to-end tests
+```bash
+$ ng build my-lib --configuration development
+$ ng test my-lib
+$ ng lint my-lib
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Building library
 
-## Further help
+```bash
+ng build my-lib
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Serving our appliaction
+
+```bash
+ng serve my-app
+```
+
+### Publishing your library
+
+```bash
+$ ng build my-lib
+$ cd dist/my-lib
+$ npm publish
+```
+
+### Managing assets in a library
+
+When including additional assets like Sass mixins or pre-compiled CSS. You need to add these manually to the conditional `exports` in the package.json of the primary entrypoint.
+
+[ng-packagr](https://www.npmjs.com/package/ng-packagr) will merge handwritten `exports` with the auto-generated ones, allowing for library authors to configure additional export subpaths, or custom conditions.
+
+```json
+"exports": {
+  ".": {
+    "sass": "./_index.scss",
+  },
+  "./theming": {
+    "sass": "./_theming.scss"
+  },
+  "./prebuilt-themes/indigo-pink.css": {
+    "style": "./prebuilt-themes/indigo-pink.css"
+  }
+}
+```
+
+### Building and rebuilding your library
+
+```bash
+ng build my-lib --watch
+```
+
+### Linking already built with watch mode to Angular app
+
+```bash
+$ cd dist/my-lib
+$ npm link
+```
+
+Now open the seperate angular app where you want to test it
+
+```bash
+npm link my-lib
+```
+
+If you already have `my-lib` it installed through npm
+
+```bash
+npm uninstall my-lib
+```
+
+add the following to the root `package.json` file
+
+```json
+"scripts": {
+  ...
+  "build_lib": "ng build my-lib",
+  "npm_pack": "cd dist/my-lib && npm pack",
+  "package": "npm run build_lib && npm run npm_pack"
+},
+```
+
+```
+npm install ../angular-lib-demo/dist/my-lib/my-lib-0.0.1.tgz
+```
+
+```typescript
+import { AngularLibDemoModule } from 'my-lib';
+```
+
+### Support Docs
+
+- [Creating libraries - Official](https://angular.io/guide/creating-libraries)
+- [The Angular Library Series - Creating a Library with Angular CLI](https://medium.com/angular-in-depth/creating-a-library-in-angular-6-87799552e7e5)
