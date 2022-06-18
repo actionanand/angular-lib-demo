@@ -134,9 +134,12 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
   },
-  "defaultProject": "ngx-ar-test-lib"
+  "defaultProject": "ngx-testing-app"
 }
