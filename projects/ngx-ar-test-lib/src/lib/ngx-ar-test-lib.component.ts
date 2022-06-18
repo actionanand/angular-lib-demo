@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'ngx-ar-ngx-ar-test-lib',
   template: `
     <p>
-      ngx-ar-test-lib works!
+      Ngx AR Test Library works!
     </p>
   `,
   styles: [
