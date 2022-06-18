@@ -125,3 +125,4 @@ import { AngularLibDemoModule } from 'my-lib';
 
 - [Creating libraries - Official](https://angular.io/guide/creating-libraries)
 - [The Angular Library Series - Creating a Library with Angular CLI](https://medium.com/angular-in-depth/creating-a-library-in-angular-6-87799552e7e5)
+- [Create your Angular Library and linking](https://medium.com/@prajramesh93/create-your-angular-library-f2cf273fd8a5)
