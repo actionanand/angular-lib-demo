@@ -11,6 +11,12 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
+    "paths": {
+      "ngx-ar-test-lib": [
+        "dist/ngx-ar-test-lib/ngx-ar-test-lib",
+        "dist/ngx-ar-test-lib"
+      ]
+    },
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
