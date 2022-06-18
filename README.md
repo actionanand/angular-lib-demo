@@ -121,6 +121,26 @@ npm install ../angular-lib-demo/dist/my-lib/my-lib-0.0.1.tgz
 import { AngularLibDemoModule } from 'my-lib';
 ```
 
+## Deploy to GitHub Pages
+
+1. To begin, add the `angular-cli-ghpages` builder.
+
+```bash
+ng add angular-cli-ghpages
+```
+
+2. If you’re deploying the project to a Github project page you’ll need to set the `baseHref` property as the repository name. The `baseHref` will be used for all relative URLs on your site. You could specify the `baseHref` as part of the project architect deploy options in the `angular.json` file. Or just pass it as the `--base-href` flag to the `ng deploy` command. If you’re deploying the project to a Github user page, you do not need to set this option.
+
+```bash
+ng deploy --base-href=/<repository-name>/
+```
+
+GitHub will automatically enable Pages when you push a gh-pages branch. There is no need to enable Pages from the repository settings.
+
+```bash
+ng deploy --base-href=/angular-lib-demo/
+```
+
 ### Support Docs
 
 - [Creating libraries - Official](https://angular.io/guide/creating-libraries)
