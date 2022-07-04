@@ -71,6 +71,12 @@ $ cd dist/my-lib
 $ npm publish
 ```
 
+Whwn publishing first time to the public repo of npm, please use the below command.
+
+```bash
+npm publish --access public
+```
+
 ### Managing assets in a library
 
 When including additional assets like Sass mixins or pre-compiled CSS. You need to add these manually to the conditional `exports` in the package.json of the primary entrypoint.
@@ -160,3 +166,5 @@ ng deploy --base-href=/angular-lib-demo/
 - [Creating libraries - Official](https://angular.io/guide/creating-libraries)
 - [The Angular Library Series - Creating a Library with Angular CLI](https://medium.com/angular-in-depth/creating-a-library-in-angular-6-87799552e7e5)
 - [Create your Angular Library and linking](https://medium.com/@prajramesh93/create-your-angular-library-f2cf273fd8a5)
+- [Material Icons' Symbols](https://fonts.google.com/icons)
+- [Material Icons Guide](https://developers.google.com/fonts/docs/material_icons)
