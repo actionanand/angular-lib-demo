@@ -12,9 +12,9 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
-      "ngx-ar-test-lib": [
-        "dist/ngx-ar-test-lib/ngx-ar-test-lib",
-        "dist/ngx-ar-test-lib"
+      "md-input": [
+        "dist/md-input/md-input",
+        "dist/md-input"
       ]
     },
     "declaration": false,

@@ -21,13 +21,27 @@ $ ng generate library my-lib --prefix demo
 ng g lib my-lib --prefix demo
 ```
 
-> This adds a `projects` directory containing a `my-lib` directory for our newly generated `my-workspace` Angular workspace.
+> This adds a `projects` directory containing a `my-lib` directory(library folder) for our newly generated `my-workspace` Angular workspace.
 
 ```bash
 ng generate application my-app
 ```
 
-> This adds a `my-app` directory in the `projects` directory
+> This adds a `my-app` directory(application folder) in the `projects` directory
+
+### Generating component, directives, etc. to lib and app
+
+```bash
+ng g d <directive-name> --project=<project-name>
+```
+
+one example
+
+```bash
+ng g d directives/input-ref --project=md-input --dry-run
+```
+
+`--dry-run` flag won't generate anything, but will show in console. 
 
 ### testing library in dev
 
