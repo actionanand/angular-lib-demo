@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
+
 import { MdInputComponent } from './md-input/md-input.component';
+import { InputRefDirective } from './directives/input-ref.directive';
 
 
 
 @NgModule({
   declarations: [
-    MdInputComponent
+    MdInputComponent,
+    InputRefDirective
   ],
   imports: [
   ],
   exports: [
-    MdInputComponent
+    MdInputComponent,
+    InputRefDirective
   ]
 })
 export class MdInputModule { }

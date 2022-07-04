@@ -1,8 +1,47 @@
 
-<h1>Angular Test app</h1>
-
 <router-outlet></router-outlet>
 
-<ng-ar-md-input></ng-ar-md-input>
+<div class="wrapper">
+  <div>
+    <label>Normal Input:</label>
+    <input type="text" placeholder="Not from lib and outside">
+  </div>
+  
+  <div>
+    <label>Normal from md lib:</label>
+    <ng-ar-md-input>
+      <input type="text" placeholder="type your text">
+    </ng-ar-md-input>
+  </div>
+</div>
 
-<i class = "material-icons">mail</i>
+<div class="container">
+  <h1>Material Icons</h1>
+  <div class="form">
+    <div class="form-row">
+      <label>Normal Input:</label>
+      <input type="text" placeholder="Not from lib">
+    </div>
+
+    <div class="form-row">
+      <label>Email Input:</label>
+      <ng-ar-md-input [icon]="'mail'">
+        <input class="normal-input" type="email" name="email" placeholder="Please enter your e-mail">
+      </ng-ar-md-input>
+    </div>
+
+    <div class="form-row">
+      <label>Without Input props :</label>
+      <ng-ar-md-input>
+        <input class="normal-input" type="text" placeholder="Please enter some text">
+      </ng-ar-md-input>
+    </div>
+
+    <div class="form-row md-input-green-theme">
+      <label>Playstore Link:</label>
+      <ng-ar-md-input icon="android">
+        <input class="normal-input" type="url" name="url" placeholder="Playstore app link">
+      </ng-ar-md-input>
+    </div>
+  </div>
+</div>
