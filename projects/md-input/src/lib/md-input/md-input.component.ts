@@ -2,13 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ng-ar-md-input',
-  template: `
-    <p>
-      md-input works!
-    </p>
-  `,
-  styles: [
-  ]
+  templateUrl: './md-input.component.html',
+  styleUrls: ['./md-input.component.scss']
 })
 export class MdInputComponent implements OnInit {
 

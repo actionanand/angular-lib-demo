@@ -3,5 +3,5 @@
  */
 
 export * from './lib/md-input.service';
-export * from './lib/md-input.component';
+export * from './lib/md-input/md-input.component';
 export * from './lib/md-input.module';

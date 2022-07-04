@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MdInputComponent } from './md-input.component';
+import { MdInputComponent } from './md-input/md-input.component';
 
 
 
