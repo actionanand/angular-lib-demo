@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgxArTestLibComponent } from './ngx-ar-test-lib.component';
+import { MdInputComponent } from './md-input.component';
 
-describe('NgxArTestLibComponent', () => {
-  let component: NgxArTestLibComponent;
-  let fixture: ComponentFixture<NgxArTestLibComponent>;
+describe('MdInputComponent', () => {
+  let component: MdInputComponent;
+  let fixture: ComponentFixture<MdInputComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NgxArTestLibComponent ]
+      declarations: [ MdInputComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgxArTestLibComponent);
+    fixture = TestBed.createComponent(MdInputComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

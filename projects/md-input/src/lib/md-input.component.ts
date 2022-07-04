@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ngx-ar-ngx-ar-test-lib',
+  selector: 'ng-ar-md-input',
   template: `
     <p>
-      Ngx AR Test Library works!
+      md-input works!
     </p>
   `,
   styles: [
   ]
 })
-export class NgxArTestLibComponent implements OnInit {
+export class MdInputComponent implements OnInit {
 
   constructor() { }
 
