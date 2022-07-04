@@ -71,6 +71,12 @@ $ cd dist/my-lib
 $ npm publish
 ```
 
+Whwn publishing first time to the public repo of npm, please use the below command.
+
+```bash
+npm publish --access public
+```
+
 ### Managing assets in a library
 
 When including additional assets like Sass mixins or pre-compiled CSS. You need to add these manually to the conditional `exports` in the package.json of the primary entrypoint.
