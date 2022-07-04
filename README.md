@@ -1,6 +1,10 @@
 # AngularLibDemo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.0. 
+
+### Libraries in this repo
+
+Code for the library(ies) of [@ng-ar/md-input](https://www.npmjs.com/package/@ng-ar/md-input) is(are) included in this repo.
 
 ## Creating angular workspace without angular app
 
