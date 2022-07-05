@@ -12,6 +12,10 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
+      "input": [
+        "dist/input/input",
+        "dist/input"
+      ],
       "md-input": [
         "dist/md-input/md-input",
         "dist/md-input"
