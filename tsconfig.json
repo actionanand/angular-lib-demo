@@ -15,6 +15,10 @@
       "md-input": [
         "dist/md-input/md-input",
         "dist/md-input"
+      ],
+      "svg-icon": [
+        "dist/svg-icon/svg-icon",
+        "dist/svg-icon"
       ]
     },
     "declaration": false,
