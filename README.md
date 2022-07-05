@@ -172,3 +172,4 @@ ng deploy --base-href=/angular-lib-demo/
 - [Create your Angular Library and linking](https://medium.com/@prajramesh93/create-your-angular-library-f2cf273fd8a5)
 - [Material Icons' Symbols](https://fonts.google.com/icons)
 - [Material Icons Guide](https://developers.google.com/fonts/docs/material_icons)
+- ['angular-svg-icon' repo](https://github.com/czeckd/angular-svg-icon)
