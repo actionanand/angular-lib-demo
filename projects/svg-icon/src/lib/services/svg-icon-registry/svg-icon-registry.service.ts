@@ -53,9 +53,6 @@ export class SvgIconRegistryService {
 			map(svg => {
 				const div = this.document.createElement('DIV');
 				div.innerHTML = svg;
-        console.log('url');
-        console.log(div)
-        console.log(this.iconsByUrl)
 				return div.querySelector('svg') as SVGElement;
 			}),
 			tap (svg => this.iconsByUrl.set(name, svg) ),

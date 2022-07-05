@@ -1,7 +1,14 @@
 /* eslint-disable @angular-eslint/component-selector */
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable @angular-eslint/no-empty-lifecycle-method */
-import { Component, OnInit } from '@angular/core';
+import { Component, ContentChild, HostBinding, Input, OnInit } from '@angular/core';
+
+import { SvgIconRegistryService } from 'projects/svg-icon/src/public-api';
+
+import { InputRefDirective } from '../directives/input-ref.directive';
+import { WRITING_HAND, PENCIL } from '../shared/svg/svg';
+
+const SVG_ICONS = [WRITING_HAND, PENCIL];
 
 @Component({
   selector: 'ng-ar-input',
@@ -9,10 +16,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./input.component.scss']
 })
 export class InputComponent implements OnInit {
+  @Input() icon:string = 'writing-hand';
+ 
+  @ContentChild(InputRefDirective) inputEl!: InputRefDirective;
 
-  constructor() { }
+  constructor(private iconRegServ: SvgIconRegistryService) {
+    SVG_ICONS.forEach(icon => {
+      this.iconRegServ.addSvg(icon.icon, icon.svg);
+    });
+  }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  ngAfterContentInit(): void {
+    // console.log(this.inputEl);
+    if (!this.inputEl) {
+      console.error('"ng-ar-input" needed an "input" element inside.');
+    }
+  }
+
+  @HostBinding('class.input-focus')
+  get isInputFocus() {
+    return this.inputEl ? this.inputEl.focus : false;
   }
 
 }

@@ -1,4 +1,8 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+
+import { SvgIconModule } from 'projects/svg-icon/src/public-api';
+
 import { InputComponent } from './input/input.component';
 import { InputRefDirective } from './directives/input-ref.directive';
 
@@ -10,9 +14,12 @@ import { InputRefDirective } from './directives/input-ref.directive';
     InputRefDirective
   ],
   imports: [
+    HttpClientModule,
+    SvgIconModule.forRoot()
   ],
   exports: [
-    InputComponent
+    InputComponent,
+    InputRefDirective
   ]
 })
 export class InputModule { }
