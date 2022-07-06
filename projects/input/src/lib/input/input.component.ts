@@ -8,7 +8,10 @@ import { SvgIconRegistryService } from 'projects/svg-icon/src/public-api';
 import { InputRefDirective } from '../directives/input-ref.directive';
 import * as i from '../shared/svg-files';
 
-const SVG_ICONS = [i.PENCIL, i.WRITING_HAND];
+const SVG_ICONS = [
+  i.ADDRESS, i.CALENDAR, i.CREDIT_CARD, i.EMAIL, i.EYE_SLASH, i.IMAGE, i.KEY, i.LINK, i.LOCK, i.MONEY, i.NIB,
+  i.PENCIL, i.PHONE, i.POST, i.USER, i.WRITING_HAND
+];
 
 @Component({
   selector: 'ng-ar-input',

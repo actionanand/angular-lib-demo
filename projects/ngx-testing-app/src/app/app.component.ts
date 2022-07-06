@@ -9,5 +9,5 @@ import { icons } from 'projects/input/src/public-api'
 })
 export class AppComponent {
   pencil = icons.PENCIL.icon;
-  writingHand = icons.WRITING_HAND.icon;
+  link = icons.LINK.icon;
 }
