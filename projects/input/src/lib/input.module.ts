@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
-import { SvgIconModule } from 'projects/svg-icon/src/public-api';
+import { SvgIconModule } from '@ng-ar/svg-icon';
 
 import { InputComponent } from './input/input.component';
 import { InputRefDirective } from './directives/input-ref.directive';
@@ -19,7 +19,7 @@ import { InputRefDirective } from './directives/input-ref.directive';
     HttpClientModule,
     CommonModule,
     BrowserModule,
-    SvgIconModule
+    SvgIconModule.forRoot()
   ],
   exports: [
     InputComponent,

@@ -3,7 +3,7 @@
 /* eslint-disable @angular-eslint/no-empty-lifecycle-method */
 import { Component, ContentChild, HostBinding, Input, OnInit } from '@angular/core';
 
-import { SvgIconRegistryService } from 'projects/svg-icon/src/public-api';
+import { SvgIconRegistryService } from '@ng-ar/svg-icon';
 
 import { InputRefDirective } from '../directives/input-ref.directive';
 import * as i from '../shared/svg-files';
