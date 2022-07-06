@@ -7,5 +7,11 @@ $border-color: green;
     -webkit-box-shadow: 0px 0px 5px  $border-color;
     box-shadow: 0px 0px 5px  $border-color;
     color: $border-color;
+
+    & .input-wrap-icon {
+      & svg {
+        filter: invert(21%) sepia(92%) saturate(5877%) hue-rotate(128deg) brightness(95%) contrast(105%);
+      }
+    }
   }
 }

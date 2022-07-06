@@ -8,4 +8,10 @@
   -webkit-box-shadow: 0 0 5px #4D90FE;
   box-shadow: 0 0 5px #4D90FE;
   color: #4D90FE; // icon color
+
+  & .input-wrap-icon {
+    & svg {
+      filter: invert(46%) sepia(64%) saturate(684%) hue-rotate(183deg) brightness(104%) contrast(99%);
+    }
+  }
 }

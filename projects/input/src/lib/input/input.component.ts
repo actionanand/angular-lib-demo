@@ -6,7 +6,7 @@ import { Component, ContentChild, HostBinding, Input, OnInit } from '@angular/co
 import { SvgIconRegistryService } from 'projects/svg-icon/src/public-api';
 
 import { InputRefDirective } from '../directives/input-ref.directive';
-import { WRITING_HAND, PENCIL } from '../shared/svg/svg';
+import { WRITING_HAND, PENCIL } from '../shared/svg-files';
 
 const SVG_ICONS = [WRITING_HAND, PENCIL];
 
@@ -16,7 +16,9 @@ const SVG_ICONS = [WRITING_HAND, PENCIL];
   styleUrls: ['./input.component.scss']
 })
 export class InputComponent implements OnInit {
-  @Input() icon:string = 'writing-hand';
+  @Input() icon: string = 'writing-hand';
+  @Input() src!: string;
+  @Input() isSrcUrl: boolean = false;
  
   @ContentChild(InputRefDirective) inputEl!: InputRefDirective;
 
