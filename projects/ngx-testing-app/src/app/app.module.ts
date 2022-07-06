@@ -19,7 +19,7 @@ import { AppComponent } from './app.component';
     HttpClientModule,
     AppRoutingModule,
     MdInputModule,
-    SvgIconModule,
+    SvgIconModule.forRoot(),
     InputModule
   ],
   providers: [],

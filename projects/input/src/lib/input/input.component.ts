@@ -19,6 +19,7 @@ export class InputComponent implements OnInit {
   @Input() icon: string = 'writing-hand';
   @Input() src!: string;
   @Input() isSrcUrl: boolean = false;
+  @Input() isIconColorChange: boolean = true;
  
   @ContentChild(InputRefDirective) inputEl!: InputRefDirective;
 

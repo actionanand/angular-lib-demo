@@ -6,9 +6,10 @@ $border-color: green;
   &.input-focus {
     -webkit-box-shadow: 0px 0px 5px  $border-color;
     box-shadow: 0px 0px 5px  $border-color;
-    color: $border-color;
 
-    & .input-wrap-icon {
+    & .input-wrap-icon--highlight {
+      color: $border-color;
+      
       & svg {
         filter: invert(21%) sepia(92%) saturate(5877%) hue-rotate(128deg) brightness(95%) contrast(105%);
       }

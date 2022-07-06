@@ -18,7 +18,8 @@ import { InputRefDirective } from './directives/input-ref.directive';
   imports: [
     HttpClientModule,
     CommonModule,
-    SvgIconModule.forRoot()
+    BrowserModule,
+    SvgIconModule
   ],
   exports: [
     InputComponent,

@@ -7,9 +7,10 @@
   border-color: #4D90FE; // - Cornflower Blue
   -webkit-box-shadow: 0 0 5px #4D90FE;
   box-shadow: 0 0 5px #4D90FE;
-  color: #4D90FE; // icon color
 
-  & .input-wrap-icon {
+  & .input-wrap-icon--highlight {
+    color: #4D90FE;
+
     & svg {
       filter: invert(46%) sepia(64%) saturate(684%) hue-rotate(183deg) brightness(104%) contrast(99%);
     }
