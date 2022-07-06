@@ -6,9 +6,9 @@ import { Component, ContentChild, HostBinding, Input, OnInit } from '@angular/co
 import { SvgIconRegistryService } from 'projects/svg-icon/src/public-api';
 
 import { InputRefDirective } from '../directives/input-ref.directive';
-import { WRITING_HAND, PENCIL } from '../shared/svg-files';
+import * as i from '../shared/svg-files';
 
-const SVG_ICONS = [WRITING_HAND, PENCIL];
+const SVG_ICONS = [i.PENCIL, i.WRITING_HAND];
 
 @Component({
   selector: 'ng-ar-input',
@@ -16,7 +16,7 @@ const SVG_ICONS = [WRITING_HAND, PENCIL];
   styleUrls: ['./input.component.scss']
 })
 export class InputComponent implements OnInit {
-  @Input() icon: string = 'writing-hand';
+  @Input() icon: string  = i.WRITING_HAND.icon;
   @Input() src!: string;
   @Input() isSrcUrl: boolean = false;
   @Input() isIconColorChange: boolean = true;
