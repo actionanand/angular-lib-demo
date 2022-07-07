@@ -18,9 +18,12 @@
     cool boy
   </ng-ar-svg-icon>
 
-  <!-- <ng-ar-svg-icon name="blue-mail" [svgStyle]="{ 'width.px':100, 'height.px': 24 }">
-    cool boy 2
-  </ng-ar-svg-icon> -->
+  <div>
+    <label>Normal from ar lib:</label>
+    <ng-ar-input>
+      <input type="text" placeholder="type your text">
+    </ng-ar-input>
+  </div>
 </div>
 
 <div class="container">
@@ -29,6 +32,20 @@
     <div class="form-row">
       <label>Normal Input:</label>
       <input type="text" placeholder="Not from lib">
+    </div>
+
+    <div class="form-row">
+      <label>Ar lib input:</label>
+      <ng-ar-input [icon]="pencil">
+        <input type="text" placeholder="type your text">
+      </ng-ar-input>
+    </div>
+
+    <div class="form-row input-green-theme">
+      <label>Green Ar lib input:</label>
+      <ng-ar-input src="../assets/images/blue-mail.svg" [isSrcUrl]="true" [isIconColorChange]="false">
+        <input type="text" placeholder="type your text">
+      </ng-ar-input>
     </div>
 
     <div class="form-row">

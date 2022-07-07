@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 // you can import from npm repo also, if you had it published to npm
 import { MdInputModule } from 'projects/md-input/src/public-api';
 import { SvgIconModule } from 'projects/svg-icon/src/public-api';
+import { InputModule } from 'projects/input/src/public-api';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,7 +19,8 @@ import { AppComponent } from './app.component';
     HttpClientModule,
     AppRoutingModule,
     MdInputModule,
-    SvgIconModule.forRoot()
+    SvgIconModule.forRoot(),
+    InputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

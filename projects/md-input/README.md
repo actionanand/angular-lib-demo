@@ -8,7 +8,7 @@ The default theme of the input is designed to look just like a plain HTML input,
 
 Here is how the inputs with the icons look like on the screen:
 
-![Demo of ng-md-prime-input](https://raw.githubusercontent.com/actionanand/angular-lib-demo/main/projects/md-input/src/lib/assets/images/ngar-md-in.PNG)
+![Demo of ng-ar-md-input](https://raw.githubusercontent.com/actionanand/angular-lib-demo/main/projects/md-input/src/lib/assets/images/ngar-md-in.PNG)
 
 # Installation
 
