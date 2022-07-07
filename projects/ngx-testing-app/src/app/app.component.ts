@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 
-import { icons } from 'projects/input/src/public-api'
 
 @Component({
   selector: 'app-root',
@@ -8,6 +7,10 @@ import { icons } from 'projects/input/src/public-api'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  pencil = icons.PENCIL.icon;
-  link = icons.LINK.icon;
+
+
+  constructor() {
+  }
+
+
 }
