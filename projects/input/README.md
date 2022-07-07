@@ -62,7 +62,7 @@ Then we can use the Prime Ng Input in `html` view as below:
 
     <div class="form-row input-green-theme">
       <label>Green svg input:</label>
-      <ng-ar-input src="../assets/images/blue-mail.svg" [isSrcUrl]="true" [isIconColorChange]="false">
+      <ng-ar-input src="assets/images/blue-mail.svg" [isSrcUrl]="true" [isIconColorChange]="false">
         <input type="email" placeholder="Please enter you e-mail">
       </ng-ar-input>
     </div>
@@ -84,7 +84,7 @@ The html core components to be added
     <input type="text" placeholder="Your text goes here">
   </ng-ar-input>
 
-  <ng-ar-input src="../assets/images/blue-mail.svg" [isSrcUrl]="true" [isIconColorChange]="false">
+  <ng-ar-input src="assets/images/blue-mail.svg" [isSrcUrl]="true" [isIconColorChange]="false">
     <input type="email" placeholder="Please enter you e-mail">
   </ng-ar-input>
 ```
@@ -101,7 +101,7 @@ Using add-on extra theme
 ```html
   <div class="form-row input-green-theme">
     <label>Green svg input:</label>
-    <ng-ar-input src="../assets/images/blue-mail.svg" [isSrcUrl]="true" [isIconColorChange]="false">
+    <ng-ar-input src="assets/images/blue-mail.svg" [isSrcUrl]="true" [isIconColorChange]="false">
       <input type="email" placeholder="Please enter you e-mail">
     </ng-ar-input>
   </div>
