@@ -21,6 +21,7 @@ yarn add @ng-ar/bg-svg
 And on your application module:
 
 ```ts
+import { HttpClientModule } from '@angular/common/http';
 import { BgSvgModule } from '@ng-ar/bg-svg';
 
 @NgModule({
@@ -28,11 +29,14 @@ import { BgSvgModule } from '@ng-ar/bg-svg';
   imports: [
     BrowserModule,
     ....,
+    HttpClientModule,
     BgSvgModule
 ],
 })
 export class AppModule { }
 ```
+
+- To make this work, your angular app should have `HttpClientModule` included in `AppModule`.
 
 Usage in `html` view as below:
 
