@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Libraries in this repo
 
-Code for the library(ies) of [@ng-ar/md-input](https://www.npmjs.com/package/@ng-ar/md-input), [@ng-ar/svg-icon](https://www.npmjs.com/package/@ng-ar/svg-icon), [@ng-ar/input](https://www.npmjs.com/package/@ng-ar/input) and [@ng-ar/bg-svg]() is(are) included in this repo.
+Code for the library(ies) of [@ng-ar/md-input](https://www.npmjs.com/package/@ng-ar/md-input), [@ng-ar/svg-icon](https://www.npmjs.com/package/@ng-ar/svg-icon), [@ng-ar/input](https://www.npmjs.com/package/@ng-ar/input) and [@ng-ar/bg-svg](https://www.npmjs.com/package/@ng-ar/bg-svg) is(are) included in this repo.
 
 ## Creating angular workspace without angular app
 
