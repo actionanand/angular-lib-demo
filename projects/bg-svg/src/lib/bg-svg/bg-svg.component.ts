@@ -18,6 +18,7 @@ export class BgSvgComponent implements OnInit {
   @Input() isFixed = true;
   @Input() isCentre = true;
   @Input() isFull = true;
+  @Input() isMinHeightSet = true;
 
   constructor(private sanitizer: DomSanitizer) { }
 
@@ -38,6 +39,6 @@ export class BgSvgComponent implements OnInit {
     this.isFixed ? this.bgImg['background-attachment'] = 'fixed' : this.bgImg['background-attachment'] = 'scroll';
     this.isCentre ? this.bgImg['background-position'] = 'center' : this.bgImg['background-position'] = 'inherit';
     this.isFull ? this.bgImg['background-size'] = 'cover' : this.bgImg['background-size'] = 'auto';
-    this.bgImg['min-height'] = '100vh';
+    this.isMinHeightSet ? this.bgImg['min-height'] = '100vh' : this.bgImg['min-height'] = 'auto';
   }
 }

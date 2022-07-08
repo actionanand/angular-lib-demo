@@ -1,24 +1,65 @@
-# BgSvg
+# Angular Background Svg
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+This library help us to set background image for the component. You can wrap this(as top element) with any component's html element to give background effect to that component or wrap around `<router-outlet></router-outlet>` to get the same background to all the pages.
 
-## Code scaffolding
+# Installation
 
-Run `ng generate component component-name --project bg-svg` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project bg-svg`.
-> Note: Don't forget to add `--project bg-svg` or else it will be added to the default project in your `angular.json` file. 
+This is how to install the components:
 
-## Build
+```bash
+npm install @ng-ar/bg-svg
+```
 
-Run `ng build bg-svg` to build the project. The build artifacts will be stored in the `dist/` directory.
+or 
 
-## Publishing
+```bash
+yarn add @ng-ar/bg-svg
+```
 
-After building your library with `ng build bg-svg`, go to the dist folder `cd dist/bg-svg` and run `npm publish`.
+> Minimum angular version needed for this library is v13.0.0.
 
-## Running unit tests
+And on your application module:
 
-Run `ng test bg-svg` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```ts
+import { BgSvgModule } from '@ng-ar/bg-svg';
 
-## Further help
+@NgModule({
+  declarations: [ ...],
+  imports: [
+    BrowserModule,
+    ....,
+    BgSvgModule
+],
+})
+export class AppModule { }
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Usage in `html` view as below:
+
+```html
+<ng-ar-bg-svg imgPath="assets/images/bg.svg">
+  ... top level html element
+</ng-ar-bg-svg>
+```
+
+```html
+<ng-ar-bg-svg imgPath="assets/images/bg.svg">
+  <router-outlet></router-outlet>
+</ng-ar-bg-svg>
+```
+or
+```html
+<ng-ar-bg-svg imgPath="assets/images/bg.svg" [isMinHeightSet]="false">
+  <div>
+    ...all the html logics for a certain component
+  </div>
+</ng-ar-bg-svg>
+```
+
+- The library receives a prop named `imgPath` that identifies svg image location. This prop is mandatory.
+- Apart from this, we have 5 other optional props with boolean values.
+- `isRepeat` is for whether to repeat the svg or not. Default value is `false`.
+- `isFixed` is to determine whether svg is fixed or not (scrollable). Default value is `true`.
+- `isCentre` is to determine whether svg is at centre or not (inherit). Default value is `true`.
+- `isFull` is to determine whether svg is covering the whole screen or not (auto). Default value is `true`.
+- `isMinHeightSet` is whether to set the view height to 100vh or not. Dafault value is `true`. If you apply `ng-ar-bg-svg ` tag to certain part of html (say header or some div block), I recommend to set this as false, as setting false will take the particular block's space only(not 100% view height).
