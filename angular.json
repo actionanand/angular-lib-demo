@@ -201,6 +201,37 @@
           }
         }
       }
+    },
+    "bg-svg": {
+      "projectType": "library",
+      "root": "projects/bg-svg",
+      "sourceRoot": "projects/bg-svg/src",
+      "prefix": "ng-ar",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/bg-svg/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/bg-svg/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/bg-svg/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/bg-svg/src/test.ts",
+            "tsConfig": "projects/bg-svg/tsconfig.spec.json",
+            "karmaConfig": "projects/bg-svg/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-testing-app"

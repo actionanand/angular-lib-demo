@@ -12,6 +12,10 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
+      "bg-svg": [
+        "dist/bg-svg/bg-svg",
+        "dist/bg-svg"
+      ],
       "input": [
         "dist/input/input",
         "dist/input"

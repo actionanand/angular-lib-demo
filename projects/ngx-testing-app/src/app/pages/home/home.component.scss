@@ -1,5 +1,6 @@
 .wrapper {
   padding-top: 1.5rem;
+  padding-bottom: 1rem;
   display: flex;
   justify-content: space-around;
 }
@@ -44,6 +45,24 @@
 // .form-input-wrap {
 //   display: inline-block;
 // }
+
+.btn-test {
+  display: inline-block;
+  color: white;
+  background-color:darkcyan;
+  padding: .6rem;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-top: 5px;
+  border: 1px solid rgb(5, 94, 94);
+  border-radius: 4px;
+
+  &:hover {
+    background-color: white;
+    color: rgb(5, 94, 94);
+    border: 1px solid rgb(5, 94, 94);
+  }
+}
 
 .img-container {
   padding-bottom: 2rem;
